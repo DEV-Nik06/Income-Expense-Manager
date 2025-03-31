@@ -26,36 +26,25 @@ Other Tools: (Mention any other tools used, e.g., Tailwind CSS, Bootstrap, etc.)
 Installation:
 Clone the repository:
 
-bash
-Copy
-Edit
+
 git clone https://github.com/yourusername/income-expense-manager.git
 Install dependencies for the backend:
 
-bash
-Copy
-Edit
+
 cd backend
 npm install
 Install dependencies for the frontend:
 
-bash
-Copy
-Edit
+
 cd frontend
 npm install
 Run the backend server:
 
-bash
-Copy
-Edit
 cd backend
 npm start
 Run the frontend app:
 
-bash
-Copy
-Edit
+
 cd frontend
 npm run dev
 Open the application in your browser at http://localhost:3000.
