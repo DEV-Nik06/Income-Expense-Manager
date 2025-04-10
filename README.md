@@ -1,4 +1,4 @@
-#Income & Expense Manager
+#TrackWise
 An intuitive web application designed to manage your finances with ease. The app allows you to track income, expenses, manage stock, and generate professional invoices, all from a single platform.
 
 Features:
