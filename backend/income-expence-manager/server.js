@@ -48,6 +48,25 @@ app.get("/stock", (req, res) => {
   });
 });
 
+app.delete("/stock/:id", (req, res) => {
+  const { id } = req.params;
+  const sql = "DELETE FROM stock WHERE id = ?";
+
+  db.query(sql, [id], (err, result) => {
+    if (err) {
+      console.error("Error deleting stock:", err);
+      return res.status(500).send({ message: "Internal Server Error" });
+    }
+
+    if (result.affectedRows === 0) {
+      return res.status(404).send({ message: "Stock item not found" });
+    }
+
+    res.send({ message: "Stock item deleted successfully" });
+  });
+});
+
+
 app.post("/income-expense", (req, res) => {
   const { category, type, amount } = req.body;
   // console.log("Incoming data:", { category, type, amount });
@@ -107,7 +126,7 @@ app.post('/api/invoice', (req, res) => {
   const { customer_name, items, total_amount } = req.body;
 
   // Log the request body for debugging
-  console.log("Received Invoice Data:", req.body);
+  // console.log("Received Invoice Data:", req.body);
 
   // Check if items is a valid array and not empty
   if (!Array.isArray(items) || items.length === 0) {
@@ -120,7 +139,7 @@ app.post('/api/invoice', (req, res) => {
   // Insert the data into the database
   db.query(sql, [customer_name, JSON.stringify(items), total_amount], (err, result) => {
     if (err) {
-      console.error("Database Error:", err);  // Log any database errors
+      // console.error("Database Error:", err);  // Log any database errors
       return res.status(500).send({ error: "Database error occurred" });
     }
     

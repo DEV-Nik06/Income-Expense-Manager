@@ -46,6 +46,21 @@ function StockManagement() {
       .catch((err) => console.error("Error adding stock:", err));
   };
 
+  // Handle delete
+  const handleDelete = (id) => {
+    if (!window.confirm("Are you sure you want to delete this item?")) return;
+
+    fetch(`http://localhost:5000/stock/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert(data.message || "Deleted successfully");
+        setStock(stock.filter((item) => item.id !== id));
+      })
+      .catch((err) => console.error("Error deleting stock:", err));
+  };
+
   return (
     <div className="container">
       <h2>Stock Management</h2>
@@ -95,23 +110,29 @@ function StockManagement() {
       <table>
         <thead>
           <tr>
-            <th>ID</th>
+            
             <th>Item Name</th>
             <th>Vendor</th>
             <th>Quantity</th>
             <th>Type</th>
             <th>Price</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           {stock.map((item) => (
             <tr key={item.id}>
-              <td>{item.id}</td>
+              {/* <td>{item.id}</td> */}
               <td>{item.item_name}</td>
               <td>{item.vendor_name}</td>
               <td>{item.quantity}</td>
               <td>{item.type}</td>
               <td>{item.price}</td>
+              <td>
+                <button type="del" onClick={() => handleDelete(item.id)}>
+                  Delete
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>

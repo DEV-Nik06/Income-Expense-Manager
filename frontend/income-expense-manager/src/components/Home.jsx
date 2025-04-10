@@ -8,7 +8,7 @@ const Home = () => {
       {/* Hero Section */}
       <header className="hero">
         <div className="hero-content">
-          <h2>Welcome to Income & Expense Manager</h2>
+          <h2>Track Smart. Grow Wise.</h2>
           <p>Track and manage your finances, stock, and invoices all in one place.</p>
           <Link to="/dashboard" className="cta-button">Get Started</Link>
         </div>
@@ -40,7 +40,7 @@ const Home = () => {
 
       {/* About Section */}
       <section className="about">
-        <img src="../../src/assets/money-management.png" alt="Money Management" className="about-img" />
+        <img src="/money-management.png" alt="Money Management" className="about-img" />
         <div className="about-content">
           <h2>Why Choose Us?</h2>
           <p>

@@ -122,7 +122,7 @@ const InvoiceComponent = () => {
             {items.length > 1 && <button type="button" onClick={() => handleRemoveItem(index)}>Remove</button>}
           </div>
         ))}
-        <button type="button" onClick={handleAddItem}>Add Item</button>
+        <button type="buttonA" onClick={handleAddItem}>Add Item</button>
 
         <div className="total"><strong>Total Amount: ₹{totalAmount}</strong></div>
         <button type="submit">Submit Invoice</button>

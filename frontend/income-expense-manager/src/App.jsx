@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
+
 import "./App.css"
-import "./style.css"
 import "./Home.css"
+import "./global.css"
+import "./dashboard.css"
+import "./Stock.css";
+import "./Income&EX.css";
 import "./invoice.css"
 
 function App() {
   return (
     <div>
-      <h1>Income & Expense Manager</h1>
+      <h1>TrackWise</h1>
       <nav>
         <ul>
           <li><Link to="/">Home</Link></li>
