@@ -27,7 +27,7 @@ Installation:
 Clone the repository:
 
 
-git clone https://github.com/yourusername/income-expense-manager.git
+git clone (https://github.com/DEV-Nik06/TrackWise.git)
 Install dependencies for the backend:
 
 
