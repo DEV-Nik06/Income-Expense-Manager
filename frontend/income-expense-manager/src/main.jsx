@@ -22,7 +22,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/stock" element={<Stock />} />
         <Route path="/income-expense" element={<IncomeExpense />} />
         <Route path="/invoices" element={<Invoices />} />
-        {/* <Route path="/invoices-list" element={<InvoicesList />} /> */}
       </Routes>
     </Router>
   </React.StrictMode>

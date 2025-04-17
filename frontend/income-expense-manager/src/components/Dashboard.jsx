@@ -58,6 +58,7 @@ function Dashboard() {
               color: data.netProfit >= 0 ? "green" : "red",
             }}
           >
+          
             ₹ {data.netProfit.toFixed(2)}
           </p>
         </div>
